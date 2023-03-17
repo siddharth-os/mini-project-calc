@@ -1,3 +1,3 @@
 FROM python
 COPY . ./
-CMD ["python3","calc.py"]
+CMD ["python3","calculator.py"]
