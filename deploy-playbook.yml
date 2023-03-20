@@ -5,8 +5,7 @@
     ansible_python_interpreter: /opt/homebrew/bin/python3
   tasks:
     - name: Pull Docker Image
-      shell: |
-        docker pull siddharth4244/miniproj
+      shell: pwd>trial.txt
 
     - name: Create & Start Calculator Docker Container
       docker_container:
