@@ -1,1 +1,1 @@
-ansible-playbook deploy-playbook.yml -i inventory --extra-vars "ansible_sudo_pass=your_password"
+ansible-playbook deploy-playbook.yml -i inventory --extra-vars "ansible_sudo_pass=Siddhu3@"
