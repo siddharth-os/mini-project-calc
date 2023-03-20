@@ -6,7 +6,7 @@
   tasks:
     - name: Pull Docker Image
       docker_image:
-        name: siddharth4244/miniproj
+        name: siddharth4244/miniproj:latest
         tag: latest
         source: pull
 
