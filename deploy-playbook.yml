@@ -5,10 +5,8 @@
     ansible_python_interpreter: /opt/homebrew/bin/python3
   tasks:
     - name: Pull Docker Image
-      docker_image:
-        name: siddharth4244/miniproj:latest
-        tag: latest
-        source: pull
+      shell: |
+        docker pull siddharth4244/miniproj
 
     - name: Create & Start Calculator Docker Container
       docker_container:
