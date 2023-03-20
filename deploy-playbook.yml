@@ -4,9 +4,22 @@
   vars:
     ansible_python_interpreter: /opt/homebrew/bin/python3
   tasks:
+    - name: Remove Docker Container
+      docker_container:
+        name: calculator
+        image: siddharth4244/miniproj
+        state: absent
+    - name: Remove Docker Image
+      docker_image:
+        name: siddharth4244/miniproj
+        tag: latest
+        state: absent
     - name: Pull Docker Image
-      shell: pwd>trial.txt
-
+      docker_image:
+        name: siddharth4244/miniproj
+        tag: latest
+        source: pull
+        state: present
     - name: Create & Start Calculator Docker Container
       docker_container:
         name: calculator
